@@ -1,0 +1,27 @@
+{
+  "name": "trabalho_banco_de_dados_escola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusLimaby/Trabalho_Banco_de_Dados_Escola.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusLimaby/Trabalho_Banco_de_Dados_Escola/issues"
+  },
+  "homepage": "https://github.com/MatheusLimaby/Trabalho_Banco_de_Dados_Escola#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "moongose": "^1.0.0",
+    "nodemon": "^3.1.11",
+    "yup": "^1.7.1"
+  }
+}
