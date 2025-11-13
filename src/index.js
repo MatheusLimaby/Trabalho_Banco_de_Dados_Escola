@@ -23,14 +23,18 @@ mongoose.connect(url)
   })
 
 // rotas
-//const CargoController = require('./controllers/CargoController');
-//app.use(CargoController);
 
-//const DepartamentoController = require('./controllers/DepartamentoController');
-//app.use(DepartamentoController);
 
-//const FuncionarioController = require('./controllers/FuncionarioController');
-//app.use(FuncionarioController);
+//Marcelo
+
+//Vinicius
+
+//Kauã
+
+//Ana 
+
+//Matheus
+
 
 app.listen(3000, () => {
   console.log("API-EMPRESAS Rodando em http://localhost:3000")
