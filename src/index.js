@@ -26,7 +26,11 @@ mongoose.connect(url)
 
 
 //Marcelo
+const ProfessorController = require("./controllers/ProfessorController");
+const DisciplinaController = require("./controllers/DisciplinaController");
 
+app.use(ProfessorController);
+app.use(DisciplinaController);
 //Vinicius
 
 //Kauã
