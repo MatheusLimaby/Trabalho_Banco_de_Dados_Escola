@@ -31,8 +31,7 @@ mongoose.connect(url)
 const AlunoController = require('./controllers/AlunoController');
 app.use(AlunoController);
 
-const CursoController = require('./controllers/CursoController');
-app.use(CursoController);
+
 
 
 //Kauã
