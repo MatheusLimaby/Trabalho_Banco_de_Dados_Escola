@@ -5,8 +5,8 @@ const schema = new mongoose.Schema(
     nome: { type: String, required: true },
     codigo: { type: String, required: true },
     duracao_semestres: { type: Number, required: true },
-    coordenador_id: { type: mongoose.Schema.Types.ObjectId, required: true },
-    descricao: { type: String, required: true },
+    professor_id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'professores' },
+    descricao: { type: String, required: true }
   },
   { timestamps: true }
 );

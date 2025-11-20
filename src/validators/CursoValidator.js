@@ -1,11 +1,11 @@
 const yup = require('yup');
 
 const cursoSchema = yup.object().shape({
-  nome: yup.string().required().min(3),
-  codigo: yup.string().required().min(2),
-  duracao_semestres: yup.number().required().min(1),
-  coordenador_id: yup.string().required(),
-  descricao: yup.string().required().min(10),
+  nome: yup.string().required("O nome do curso é obrigatório"),
+  codigo: yup.string().required("O código do curso é obrigatório"),
+  duracao_semestres: yup.number().required("A duração em semestres é obrigatória"),
+  professor_id: yup.string().required("O ID do professor é obrigatório"),
+  descricao: yup.string().required("A descrição é obrigatória")
 });
 
 async function validarCurso(req, res, next) {
@@ -18,11 +18,11 @@ async function validarCurso(req, res, next) {
 }
 
 const cursoAtualizarSchema = yup.object().shape({
-  nome: yup.string().min(3),
-  codigo: yup.string().min(2),
-  duracao_semestres: yup.number().min(1),
-  coordenador_id: yup.string(),
-  descricao: yup.string().min(10),
+  nome: yup.string(),
+  codigo: yup.string(),
+  duracao_semestres: yup.number(),
+  professor_id: yup.string(),
+  descricao: yup.string()
 });
 
 async function validarCursoAtualizacao(req, res, next) {

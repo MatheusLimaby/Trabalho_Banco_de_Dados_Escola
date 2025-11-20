@@ -40,8 +40,12 @@ app.use(CursoController);
 //Ana 
 
 //Matheus
-
-
+const TurmaController = require('./controllers/TurmaController');
+app.use(TurmaController);
+const EnderecoController = require('./controllers/EnderecoController');
+app.use(EnderecoController);
+const CursoController = require('./controllers/CursoController');
+app.use(CursoController);
 app.listen(3000, () => {
   console.log("API-EMPRESAS Rodando em http://localhost:3000")
 })
