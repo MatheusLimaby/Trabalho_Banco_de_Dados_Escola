@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 
@@ -21,13 +22,18 @@ mongoose.connect(url)
   .catch(err => {
     console.log("Erro ao conectar no banco MongoDB: ", err)
   })
-
 // rotas
 
 
 //Marcelo
 
 //Vinicius
+const AlunoController = require('./controllers/AlunoController');
+app.use(AlunoController);
+
+const CursoController = require('./controllers/CursoController');
+app.use(CursoController);
+
 
 //Kauã
 
