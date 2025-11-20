@@ -32,6 +32,12 @@ mongoose.connect(url)
 //Kauã
 
 //Ana 
+const FuncionarioRoutes = require("./controllers/FuncionarioController")
+const MatriculaRoutes = require("./controllers/MatriculaController")
+
+app.use('/funcionario', FuncionarioRoutes)
+app.use('/matricula', MatriculaRoutes)
+
 
 //Matheus
 
