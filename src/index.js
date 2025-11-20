@@ -35,6 +35,17 @@ app.use(AlunoController);
 
 
 //Kauã
+const SalasRoutes = require('./controllers/SalasController');
+const DepartamentoRoutes = require('./controllers/DepartamentoController');
+const NotasRoutes = require('./controllers/NotasController');
+
+
+
+app.use('/salas', SalasRoutes)
+app.use('/departamentos', DepartamentoRoutes);
+app.use('/notas', NotasRoutes);
+
+
 
 //Ana 
 
