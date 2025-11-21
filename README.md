@@ -1,4 +1,4 @@
-# Trabalho_Banco_de_Dados_Escola
+# Trabalho_Banco_de_Dados_Escola.
 
 Sistema de Gestão Escolar (API)
 
