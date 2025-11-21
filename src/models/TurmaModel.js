@@ -8,7 +8,7 @@ const schema = new mongoose.Schema(
     dia: { type: String, required: true },
     inicio: { type: String, required: true },
     fim: { type: String, required: true },
-    sala_id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Salas' }
+    sala_id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Sala' }
   },
   { timestamps: true }
 );

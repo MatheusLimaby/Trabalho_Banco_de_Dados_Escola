@@ -3,7 +3,7 @@ const router = express.Router();
 
 const CursoModel = require('../models/CursoModel');
 const { validarCurso, validarCursoAtualizacao } = require('../validators/CursoValidator');
-const { validarId } = require('../validators/IDvalidator');
+
 
 // LISTAR TODOS
 router.get('/cursos', async (req, res) => {
@@ -12,7 +12,7 @@ router.get('/cursos', async (req, res) => {
 });
 
 // BUSCAR POR ID
-router.get('/cursos/:id', validarId, async (req, res) => {
+router.get('/cursos/:id', validarCurso, async (req, res) => {
   const curso = await CursoModel.findById(req.params.id).populate('professor_id');
 
   if (!curso) {
@@ -29,7 +29,7 @@ router.post('/cursos', validarCurso, async (req, res) => {
 });
 
 // ATUALIZAR
-router.put('/cursos/:id', validarId, validarCursoAtualizacao, async (req, res) => {
+router.put('/cursos/:id', validarCurso, validarCursoAtualizacao, async (req, res) => {
   const cursoAtualizado = await CursoModel.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -44,7 +44,7 @@ router.put('/cursos/:id', validarId, validarCursoAtualizacao, async (req, res) =
 });
 
 // DELETAR
-router.delete('/cursos/:id', validarId, async (req, res) => {
+router.delete('/cursos/:id', validarCurso, async (req, res) => {
   const cursoDeletado = await CursoModel.findByIdAndDelete(req.params.id);
 
   if (!cursoDeletado) {
